@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class Card {
   title: string = 'for week';
-  unit: string = 'Basi';
+  unit: string = 'Basic';
   price: number = 56;
 }
