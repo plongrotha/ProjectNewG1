@@ -8,10 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Card } from './card/card.component';
 import { Header } from './header/header.component';
+import { Menu } from './header/menu/menu.component';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Home } from './home/home.component';
+import { Serivce } from './service/service.component';
+import { Payment } from './payment/payment.component';
 
 @NgModule({
-  declarations: [AppComponent, Card, Header],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent, Card, Header, Menu, Home, Serivce, Payment],
+  imports: [BrowserModule, AppRoutingModule, RouterLink, RouterLinkActive],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
