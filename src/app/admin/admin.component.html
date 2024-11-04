@@ -1,58 +1,217 @@
+<!--------->
+
 <div class="container">
-  <button class="bt">Add new Store</button>
   <div class="row">
-    <div class="col-12">
+    <div class="col-14">
+      <form
+        [formGroup]="myForm"
+        (ngSubmit)="onSubmit()"
+        class="row g-4 needs-validation"
+        novalidate
+      >
+        <div class="col-md-4">
+          <label for="name" class="form-label">Contact-Email</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            value="Mark"
+            required
+            formControlName="email"
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="col-md-4">
+          <label for="name" class="form-label">Contact-name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            value="Mark"
+            required
+            formControlName="name"
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="col-md-4">
+          <label for="name" class="form-label">Contact-phone</label>
+          <input
+            type="number"
+            class="form-control"
+            id="phone"
+            value="Mark"
+            required
+            formControlName="phone"
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="col-md-4">
+          <label for="name" class="form-label">Address-1</label>
+          <input
+            type="text"
+            class="form-control"
+            id="address1"
+            value="Mark"
+            required
+            formControlName="address1"
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="col-md-4">
+          <label for="name" class="form-label">Address-2</label>
+          <input
+            type="text"
+            class="form-control"
+            id="address2"
+            value="Mark"
+            required
+            formControlName="address2"
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <!--this -->
+        <div class="col-md-4">
+          <label for="validationCustom04" class="form-label">Country</label>
+          <select
+            class="form-select"
+            id="validationCustom04"
+            required
+            class="form-control"
+            formControlName="country"
+          >
+            <option selected disabled value="">Choose...</option>
+            <option>Cambodia</option>
+            <option>United States</option>
+            <option>Canada</option>
+            <option>Mexico</option>
+            <option>Brazil</option>
+            <option>United Kingdom</option>
+            <option>Germany</option>
+            <option>France</option>
+            <option>India</option>
+            <option>Australia</option>
+            <option>Japan</option>
+          </select>
+          <div class="invalid-feedback">Please select a valid state.</div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="validationCustom04" class="form-label">State</label>
+          <select
+            class="form-select"
+            id="validationCustom04"
+            required
+            class="form-control"
+            formControlName="state"
+          >
+            <option selected disabled value="">Choose...</option>
+            <option>kandal</option>
+            <option value="CA">California</option>
+            <option>Texas</option>
+            <option>New York</option>
+            <option>Florida</option>
+            <option>Illinois</option>
+            <option>Pennsylvania</option>
+            <option>Ohio</option>
+            <option>Michigan</option>
+            <option>Georgia</option>
+            <option>North Carolina</option>
+          </select>
+          <div class="invalid-feedback">Please select a valid state.</div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="validationCustom04" class="form-label">City</label>
+          <select
+            class="form-select"
+            id="validationCustom04"
+            required
+            class="form-control"
+            formControlName="city"
+          >
+            <option selected disabled value="">Choose...</option>
+            <option>PhomPenh</option>
+            <option>New York City</option>
+            <option>Los Angeles</option>
+            <option>Chicago</option>
+            <option>Houston</option>
+            <option>Phoenix</option>
+            <option>Philadelphia</option>
+            <option>San Antonio</option>
+            <option>Dallas</option>
+            <option>San Francisco</option>
+            <option>Seattle</option>
+          </select>
+          <div class="invalid-feedback">Please select a valid state.</div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="age" class="form-label">zip-Code</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            value="Mark"
+            required
+            formControlName="age"
+            type="number"
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div
+          *ngIf="myForm.get('name')?.invalid && myForm.get('name')?.touched"
+        ></div>
+
+        <div
+          *ngIf="myForm.get('age')?.invalid && myForm.get('age')?.touched"
+        ></div>
+        <div class="col-12">
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="myForm.invalid"
+          >
+            {{ editIndex !== null ? "Update" : "Save" }}
+          </button>
+        </div>
+      </form>
+
       <table>
-        <tr>
-          <th>Store-Name</th>
-          <th>Address</th>
-          <th>Bussiness-name</th>
-          <th>Bussiness-Type</th>
-          <th></th>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>
-            <a
-              href="#"
-              class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-              >Edit</a
-            >
-            &nbsp;&nbsp;
-            <a
-              href="#"
-              class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-              >Close</a
-            >
-            &nbsp;&nbsp;
-            <a
-              href="#"
-              class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-              >Store Hour</a
-            >
-            &nbsp;&nbsp;
-            <a
-              href="#"
-              class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-              >Store Holiday</a
-            >
-            &nbsp;&nbsp;
-            <a
-              href="/src/app/Temclose/temclose.component.html"
-              class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-              >Temporary Close</a
-            >
-            &nbsp;&nbsp;
-            <a
-              href="#"
-              class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-              >Open</a
-            >
-          </td>
-        </tr>
+        <thead>
+          <tr>
+            <th>Contact-Email</th>
+            <th>Contach-Name</th>
+            <th>Contach-Phone</th>
+            <th>Address-1</th>
+            <th>Address-2</th>
+            <th>Country</th>
+            <th>state</th>
+            <th>City</th>
+            <th>Zip-code</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of dataSource; let i = index">
+            <td>{{ data.email }}</td>
+            <td>{{ data.name }}</td>
+            <td>{{ data.phone }}</td>
+            <td>{{ data.address1 }}</td>
+
+            <td>{{ data.address2 }}</td>
+            <td>{{ data.country }}</td>
+            <td>{{ data.state }}</td>
+            <td>{{ data.city }}</td>
+            <td>{{ data.age }}</td>
+            <td>
+              <button class="btn btn-info" (click)="onEdit(i)">Edit</button>
+              &nbsp; &nbsp;
+              <button class="btn btn-danger" (click)="onDelete(i)">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </div>

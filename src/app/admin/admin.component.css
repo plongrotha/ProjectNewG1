@@ -12,15 +12,10 @@ td {
 th {
   background-color: hotpink;
 }
-.bt {
-  border: 1px solid white;
-  width: 120px;
-  height: 40px;
-  background-color: rgb(245, 131, 150);
-  color: white;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
+
 td {
   background-color: rgb(49, 49, 49);
+}
+.container {
+  margin-top: 100px;
 }
