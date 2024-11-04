@@ -1,0 +1,148 @@
+Chheang Vandy, [11/4/2024 8:38 AM]
+
+
+          <div class="col-6">
+            <label for="validationServer04" class="form-label">State</label>
+            <select
+              class="form-select valid"
+              id="validationServer04"
+              aria-describedby="validationServer04Feedback"
+              required
+              formControlName="state"
+            >
+              <option selected disabled value="">Choose...</option>
+              <option>Kandal</option>
+              <option>Ohio</option>
+              <option>Michigan</option>
+              <option>California</option>
+              <option>Hawaii</option>
+              <option>Florida</option>
+              <option>Fukuoka</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <label for="validationServer04" class="form-label">Country</label>
+            <select
+              class="form-select valid"
+              id="validationServer04"
+              aria-describedby="validationServer04Feedback"
+              required
+              formControlName="country"
+            >
+              <option selected disabled value="">Choose...</option>
+              <option>Cambodia</option>
+              <option>USA</option>
+              <option>Japan</option>
+              <option>Cannda</option>
+              <option>England</option>
+              <option>Russia</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <label for="">Zip Code</label>
+            <input type="text" formControlName="pinCode" class="form-control" />
+            <div class="text-danger">
+              @if(employeeForm.controls['name'].touched){
+              @if(employeeForm.controls['name'].errors?.['required']){
+              <span>Name is required</span>
+              } @if(employeeForm.controls['name'].errors?.['minlength']){
+              <span>Min 6 char is required</span>
+              } }
+            </div>
+          </div>
+        </div>
+        <div class="row pt-2">
+          <div class="col-6 text-center">
+            <button class="btn btn-secondary" type="button" (click)="reset()">
+              Cancel
+            </button>
+          </div>
+          <div class="col-6 text-center">
+            @if(employeeForm.controls['empId'].value == '1'){
+            <button
+              type="button"
+              class="btn btn-success"
+              [disabled]="employeeForm.invalid"
+              (click)="onSave()"
+            >
+              Save
+            </button>
+            }@else {
+            <button
+              type="button"
+              class="btn btn-warning"
+              [disabled]="employeeForm.invalid"
+              (click)="onUpdate()"
+            >
+              Update Employee
+            </button>
+            }
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--Endd this -->
+
+<div class="col-10">
+  <div class="card">
+    <div class="card-header bg-warning">
+      <h5>CompanyInFo List</h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-12">
+          <table class="table table-bordered">
+            <tr>
+              <th>Sr No</th>
+              <th>Conract-Email</th>
+
+              <th>Contact-Phone</th>
+              <th>Contact Name</th>
+              <th>Address</th>
+              <th>Address2</th>
+              <th>State</th>
+              <th>City</th>
+              <th>Country</th>
+              <th>Zip Code</th>
+
+<!-- Chheang Vandy, [11/4/2024 8:38 AM] -->
+
+
+              <th>Action</th>
+            </tr>
+            <tbody>
+              @for (item of employeeList; track $index){
+              <tr>
+                <td>{{ $index + 1 }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.contactNo }}</td>
+                <td>{{ item.emailId }}</td>
+                <td>{{ item.address }}</td>
+                <td>{{ item.add }}</td>
+                <td>{{ item.state }}</td>
+                <td>{{ item.city }}</td>
+                <td>{{ item.country }}</td>
+                <td>{{ item.pinCode }}</td>
+                <td class="text-center">
+                  <button class="btn btn-info" (click)="onCopy(item)">
+                    Copy
+                  </button>
+                  <button class="btn btn-primary" (click)="onEdit(item)">
+                    Edit
+                  </button>
+                  <button class="btn btn-danger" (click)="onDelete(item.empId)">
+                    Delete
+                  </button>
+                </td>
+              </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
