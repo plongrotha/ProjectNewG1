@@ -1,5 +1,62 @@
-Chheang Vandy, [11/4/2024 8:38 AM]
+<!---nava bar -->
+<div class="col-6">
+  <div class="card">
+    <div class="card-header bg-primary"><h5>Company Contact Info</h5></div>
+    <div class="card-body">
+      <form [formGroup]="employeeForm">
+        <div class="row">
+          <div class="col-12">
+            <label for="">Contact-Email</label>
+            <input type="text" formControlName="name" class="form-control" />
+            <div class="text-danger">
+              @if(employeeForm.controls['name'].touched){
+              @if(employeeForm.controls['name'].errors?.['required']){
+              <span>Name is required</span>
+              } }
+            </div>
+          </div>
+          <div class="col-6">
+            <label for="">Contact-name</label>
+            <input type="text" formControlName="emailId" class="form-control" />
+          </div>
+          <div class="col-6">
+            <input
+              type="text"
+              formControlName="contactNo"
+              class="form-control"
+            />
+          </div>
+          <div class="col-6">
+            <label for="">Address</label>
+            <input type="text" formControlName="address" class="form-control" />
+          </div>
+          <div class="col-6">
+            <label for="">Address2</label>
+            <input type="text" formControlName="add" class="form-control" />
+          </div>
+          <div class="col-6">
+            <label for="validationServer04" class="form-label">City</label>
+            <select
+              class="form-select valid"
+              id="validationServer04"
+              aria-describedby="validationServer04Feedback"
+              required
+              formControlName="city"
+            >
+              <option selected disabled value="">Choose...</option>
+              <option>PhomPenh</option>
+              <option>Tokyo</option>
+              <option>Paris</option>
+              <option>London</option>
 
+              <option>Tokyo</option>
+              <option>Moscow</option>
+              <option>Los Angeles</option>
+              <option>New York</option>
+              <option>Tokyo</option>
+              <option>San Francisco</option>
+            </select>
+          </div>
 
           <div class="col-6">
             <label for="validationServer04" class="form-label">State</label>
@@ -107,9 +164,6 @@ Chheang Vandy, [11/4/2024 8:38 AM]
               <th>City</th>
               <th>Country</th>
               <th>Zip Code</th>
-
-<!-- Chheang Vandy, [11/4/2024 8:38 AM] -->
-
 
               <th>Action</th>
             </tr>
