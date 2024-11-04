@@ -4,7 +4,7 @@ table {
 }
 th,
 td {
-  border: 3px solid gray;
+  border: 3px solid cyan;
   padding: 15px;
   text-align: center;
   color: whitesmoke;
@@ -22,5 +22,5 @@ th {
   margin-bottom: 20px;
 }
 td {
-  background-color: rgb(249, 159, 174);
+  background-color: rgb(49, 49, 49);
 }
