@@ -18,7 +18,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Admin } from './admin/admin.component';
 import { Link } from './link/link.component';
-import { temclose } from './Temclose/temclose.component';
+import { Temclose } from './Temclose/temclose.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { temclose } from './Temclose/temclose.component';
     Payment,
     Admin,
     Link,
-    temclose,
+    Temclose,
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import { Service } from './service/service.component';
 import { Home } from './home/home.component';
 import { Admin } from './admin/admin.component';
 import { Link } from './link/link.component';
+import { Temclose } from './Temclose/temclose.component';
 
 const routes: Routes = [
   {
@@ -28,8 +29,10 @@ const routes: Routes = [
     path: 'link',
     component: Link,
   },
-
-
+  {
+    path: 'tem',
+    component: Temclose,
+  },
 ];
 
 @NgModule({
