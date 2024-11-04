@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './temclose.component.html',
   styleUrl: './temclose.component.css',
 })
-export class temclose {}
+export class Temclose {}
