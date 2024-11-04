@@ -11,12 +11,12 @@ import { Header } from './header/header.component';
 import { Menu } from './header/menu/menu.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { Home } from './home/home.component';
-import { Serivce } from './service/service.component';
+import { Service } from './service/service.component';
 import { Payment } from './payment/payment.component';
-import { EmployeeModel } from './model/Employee';
-import { FirstForm } from './firstform/firstform.component';
+
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Admin } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -25,10 +25,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     Header,
     Menu,
     Home,
-    Serivce,
+    Service,
     Payment,
-
-    FirstForm,
+    Admin,
   ],
   imports: [
     BrowserModule,

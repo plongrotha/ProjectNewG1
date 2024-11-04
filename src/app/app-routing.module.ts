@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Serivce } from './service/service.component';
-// import { Home } from './home/home.component';
+import { Service } from './service/service.component';
+import { Home } from './home/home.component';
+import { Admin } from './admin/admin.component';
 
 const routes: Routes = [
   {
@@ -10,8 +11,16 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'home',
+    component: Home,
+  },
+  {
     path: 'service',
-    component: Serivce,
+    component: Service,
+  },
+  {
+    path: 'Admin',
+    component: Admin,
   },
 ];
 
