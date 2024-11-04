@@ -17,6 +17,7 @@ import { Payment } from './payment/payment.component';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Admin } from './admin/admin.component';
+import { Link } from './link/link.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,8 @@ import { Admin } from './admin/admin.component';
     Service,
     Payment,
     Admin,
+    Link,
+    
   ],
   imports: [
     BrowserModule,
