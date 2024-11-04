@@ -1,0 +1,26 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 3px solid gray;
+  padding: 15px;
+  text-align: center;
+  color: whitesmoke;
+}
+th {
+  background-color: hotpink;
+}
+.bt {
+  border: 1px solid white;
+  width: 120px;
+  height: 40px;
+  background-color: rgb(245, 131, 150);
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+td {
+  background-color: rgb(249, 159, 174);
+}
