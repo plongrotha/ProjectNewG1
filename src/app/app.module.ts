@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { Admin } from './admin/admin.component';
 import { Link } from './link/link.component';
 import { Temclose } from './Temclose/temclose.component';
+import { Setup } from './setupcampany/setup.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { Temclose } from './Temclose/temclose.component';
     Admin,
     Link,
     Temclose,
+    Setup,
   ],
   imports: [
     BrowserModule,
