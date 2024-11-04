@@ -30,6 +30,7 @@ import { Link } from './link/link.component';
     Payment,
     Admin,
     Link,
+    
   ],
   imports: [
     BrowserModule,
