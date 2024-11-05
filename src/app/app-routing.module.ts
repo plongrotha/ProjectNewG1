@@ -5,6 +5,7 @@ import { Home } from './home/home.component';
 import { Admin } from './admin/admin.component';
 import { Link } from './link/link.component';
 import { Temclose } from './Temclose/temclose.component';
+import { Edit } from './admin/Edit/edit.cmponent';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'tem',
     component: Temclose,
+  },
+  {
+    path: 'edit',
+    component: Edit,
   },
 ];
 
