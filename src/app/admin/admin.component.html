@@ -104,6 +104,7 @@
             required
             class="form-control"
             formControlName="state"
+            aria-label="Default select example"
           >
             <option selected disabled value="">Choose...</option>
             <option>kandal</option>
@@ -115,8 +116,6 @@
             <option>Pennsylvania</option>
             <option>Ohio</option>
             <option>Michigan</option>
-            <option>Georgia</option>
-            <option>North Carolina</option>
           </select>
           <div class="invalid-feedback">Please select a valid state.</div>
         </div>
@@ -138,10 +137,8 @@
             <option>Houston</option>
             <option>Phoenix</option>
             <option>Philadelphia</option>
-            <option>San Antonio</option>
-            <option>Dallas</option>
+
             <option>San Francisco</option>
-            <option>Seattle</option>
           </select>
           <div class="invalid-feedback">Please select a valid state.</div>
         </div>
@@ -167,6 +164,8 @@
           *ngIf="myForm.get('age')?.invalid && myForm.get('age')?.touched"
         ></div>
         <div class="col-12">
+          <button class="btn btn-info">Cancel</button>
+          &nbsp; &nbsp;
           <button
             class="btn btn-primary"
             type="submit"
@@ -175,6 +174,7 @@
             {{ editIndex !== null ? "Update" : "Save" }}
           </button>
         </div>
+        &nbsp; &nbsp;
       </form>
 
       <table>
@@ -213,6 +213,70 @@
             </td>
           </tr>
         </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!--end this---->
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="title">
+        <h2>Setup Store</h2>
+        <span></span>
+      </div>
+      <table>
+        <tr>
+          <th>Store-Name</th>
+          <th>Address</th>
+          <th>Bussiness-Name</th>
+          <th>Business-Type</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td colspan="2">
+            <a
+              href="#"
+              class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              >Edit</a
+            >
+            &nbsp;
+            <a
+              href="#"
+              class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              >Close</a
+            >
+            &nbsp;
+            <a
+              href="#"
+              class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              >Store-Hour</a
+            >
+            &nbsp;
+            <a
+              href="#"
+              class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              >Store-Hour</a
+            >
+            &nbsp;
+            <a
+              href="#"
+              class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              >Temporary</a
+            >
+            &nbsp;
+            <a
+              href="#"
+              class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+              >close</a
+            >
+          </td>
+        </tr>
       </table>
     </div>
   </div>
