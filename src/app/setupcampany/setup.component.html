@@ -1,17 +1,38 @@
 <div class="container d-flex align-item-center justify-content-center">
-  <form action="">
+  <form
+    action="#"
+    class="bg-dark bg-opacity-100 text-white p-3 border-start-0 rounded-4"
+  >
     <div class="form-group">
-      <label for="text">Business Name</label>
-      <input type="text" class="form-control m-2" />
+      <div>
+        <label for="text">Business Name</label>
+        <input type="text" class="form-control" />
+      </div>
+      <div>
+        <label for="text">Business Type</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>...</option>
+          <option value="1">Insurance</option>
+          <option value="2">Private Company</option>
+          <option value="3">Public Company</option>
+        </select>
+      </div>
     </div>
     <div class="form-group">
-      <label for="text">Business Type</label>
-      <select class="form-select" aria-label="Default select example">
-        <option selected>...</option>
-        <option value="1">Insurance</option>
-        <option value="2">Private Company</option>
-        <option value="3">Public Company</option>
-      </select>
+      <div>
+        <label for="text">Company Logo</label><br />
+        <input type="file" />
+      </div>
+      <div>
+        <label for="text">Banner</label><br />
+        <input type="file" />
+      </div>
+    </div>
+    <div class="m-2">
+      <div class="p-2 d-flex">
+        <button class="btn ms-auto btn-danger">Cancel</button>
+        <button class="btn ms-1 btn-success">Save</button>
+      </div>
     </div>
   </form>
 </div>
