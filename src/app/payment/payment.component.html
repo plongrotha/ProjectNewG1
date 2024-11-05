@@ -1,68 +1,29 @@
-<div class="container">
-  <form action="">
-    <div class="row">
-      <div class="col">
-        <h4>address billing</h4>
-        <div class="inputbox">
-          <span>Name :</span>
-          <input type="text" placeholder="enter Name" />
+<div class="container d-flex justify-content-center">
+  <div class="form-group">
+    <form action="#" class="rounded-3 border border-2 w-75">
+      <div class="row">
+        <div class="col">
+          <label for="text" class="form-label"></label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="111 - 222 - 333"
+          />
         </div>
-        <div class="inputbox">
-          <span>Email :</span>
-          <input type="email" placeholder="enter email" />
-        </div>
-        <div class="inputbox">
-          <span>Add :</span>
-          <input type="text" placeholder="enter add" />
-        </div>
-        <div class="inputbox">
-          <span>City :</span>
-          <input type="text" placeholder="enter City" />
-        </div>
-
-        <div class="flex">
-          <div class="inputbox">
-            <span>state :</span>
-            <input type="text" placeholder="enter state" />
-          </div>
-          <div class="inputbox">
-            <span>zipecode :</span>
-            <input type="text" placeholder="enter zipecode" />
-          </div>
+        <div class="col">
+          <label for="text" class="form-label">Name Cart</label>
+          <input type="text" class="form-control" />
         </div>
       </div>
-
-      <div class="col">
-        <h4>payment</h4>
-
-        <div class="inputbox">
-          <span>card accepted :</span>
-          <img src="../../assets/img/card-accepted.webp" alt="" />
-        </div>
-        <div class="inputbox">
-          <span>card name :</span>
-          <input type="text" placeholder="card name" />
-        </div>
-        <div class="inputbox">
-          <span>card number :</span>
-          <input type="number" placeholder="1111 - 2222 - 3333" />
-        </div>
-        <div class="inputbox">
-          <span>exp date :</span>
-          <input type="date" placeholder="" />
-        </div>
-        <div class="inputbox">
-          <span>card type :</span>
-          <input type="text" />
+      <div class="row">
+        <div class="col">
+          <label for="text" class="form-label">Cart Type</label>
+          <select name="cart" id="" class="form-select">
+            <option value="">Visa</option>
+            <option value="">Master</option>
+          </select>
         </div>
       </div>
-    </div>
-
-    <div class="mt-3">
-      <button class="btn btn-danger g-3">cancel</button>
-      <button type="submit" class="btn btn-success submit-btn">save</button>
-    </div>
-  </form>
+    </form>
+  </div>
 </div>
-<br />
-<br />
