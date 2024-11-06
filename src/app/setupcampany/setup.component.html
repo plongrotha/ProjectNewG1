@@ -21,17 +21,19 @@
     <div class="form-group">
       <div>
         <label for="text" class="form-label">Company Logo</label><br />
-        <input type="file" />
+        <input type="file" (change)="onselectLogo($event)">
+        <img [src]="url" width="100" alt=""><br>
       </div>
       <div>
         <label for="text" class="form-label">Banner</label><br />
-        <input type="file" />
+        <input type="file" (change)="onselectBanner($event)">
+        <img [src]="url" width="100" alt=""><br>
       </div>
     </div>
     <div class="m-2">
       <div class="p-2 d-flex">
         <button class="btn ms-auto btn-danger">Cancel</button>
-        <button class="btn ms-1 btn-success">Save</button>
+        <button class="btn ms-1 btn-success" >Save</button>
       </div>
     </div>
   </form>

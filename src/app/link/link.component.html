@@ -162,10 +162,10 @@
             *ngIf="myForm.get('age')?.invalid && myForm.get('age')?.touched"
           ></div>
           <div class="col-12">
-            <button class="btn btn-info">Cancel</button>
+            <button class="btn btn-danger">Cancel</button>
             &nbsp; &nbsp;
             <button
-              class="btn btn-primary"
+              class="btn btn-success"
               type="submit"
               [disabled]="myForm.invalid"
             >
@@ -176,6 +176,7 @@
         </form>
   
         <table>
+
           <thead>
             <tr>
               <th>Contact-Email</th>
@@ -190,6 +191,7 @@
               <th>Actions</th>
             </tr>
           </thead>
+
           <tbody>
             <tr *ngFor="let data of dataSource; let i = index">
               <td>{{ data.email }}</td>
@@ -211,6 +213,7 @@
               </td>
             </tr>
           </tbody>
+
         </table>
       </div>
     </div>

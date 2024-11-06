@@ -56,4 +56,5 @@ export class Admin {
   onDelete(index: number) {
     this.dataSource.splice(index, 1);
   }
+  
 }
