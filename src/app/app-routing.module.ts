@@ -6,6 +6,7 @@ import { Admin } from './admin/admin.component';
 import { Link } from './link/link.component';
 import { Temclose } from './Temclose/temclose.component';
 import { Edit } from './admin/Edit/edit.cmponent';
+import { addimg } from './addimg/addimg.coponent';
 
 const routes: Routes = [
   {
@@ -40,6 +41,7 @@ const routes: Routes = [
   },
   {
     path: 'addimg',
+    component:addimg
   },
 ];
 
