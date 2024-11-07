@@ -20,8 +20,10 @@ import { Admin } from './admin/admin.component';
 import { Link } from './link/link.component';
 import { Temclose } from './Temclose/temclose.component';
 import { Setup } from './setupcampany/setup.component';
-import { Contact } from './contact/contact.component';
+
 import { Edit } from './admin/Edit/edit.cmponent';
+import { addimg } from './addimg/addimg.coponent';
+import { Contact } from './Contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -36,8 +38,9 @@ import { Edit } from './admin/Edit/edit.cmponent';
     Link,
     Temclose,
     Setup,
-    Contact,
+  Contact,
     Edit,
+    addimg,
   ],
   imports: [
     BrowserModule,

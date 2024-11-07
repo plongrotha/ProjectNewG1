@@ -38,6 +38,9 @@ const routes: Routes = [
     path: 'edit',
     component: Edit,
   },
+  {
+    path: 'addimg',
+  },
 ];
 
 @NgModule({
